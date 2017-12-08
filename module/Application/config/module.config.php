@@ -3,8 +3,10 @@ namespace Application;
 
 use Application\Controller\Index as IndexController;
 use Application\Controller\Login as LoginController;
+use Application\Controller\Register as RegisterController;
 use Application\Model\Factory\Controller\Index as IndexControllerFactory;
 use Application\Model\Factory\Controller\Login as LoginControllerFactory;
+use Application\Model\Factory\Controller\Register as RegisterControllerFactory;
 use Zend\Router\Http\Literal;
 use Zend\Router\Http\Segment;
 use Zend\ServiceManager\Factory\InvokableFactory;
@@ -32,12 +34,23 @@ return [
                     ],
                 ],
             ],
+            'register' => [
+                'type'    => Literal::class,
+                'options' => [
+                    'route'    => '/register',
+                    'defaults' => [
+                        'controller' => RegisterController::class,
+                        'action'     => 'index',
+                    ],
+                ],
+            ],
         ],
     ],
     'controllers' => [
         'factories' => [
             IndexController::class => IndexControllerFactory::class,
             LoginController::class => LoginControllerFactory::class,
+            RegisterController::class => RegisterControllerFactory::class,
         ],
     ],
     'view_manager' => [
