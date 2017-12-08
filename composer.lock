@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "70593db917e1c600a4df0069149c2a7a",
-    "content-hash": "dc2218999ccc034d45cab117ae3c9b9b",
+    "hash": "7a0ac84f86b9f2c6f2f9f7f2af1e2f03",
+    "content-hash": "9c02f4b6d6acb6e0a003f222b264f0ec",
     "packages": [
         {
             "name": "container-interop/container-interop",
@@ -91,6 +91,36 @@
                 "instantiate"
             ],
             "time": "2015-06-14 21:17:01"
+        },
+        {
+            "name": "leo-galleguillos/flash",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/LeoGalleguillos/Flash.git",
+                "reference": "5f0a873780c84d17fd438ab5e8f3cf8e1cd9e400"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/LeoGalleguillos/Flash/zipball/5f0a873780c84d17fd438ab5e8f3cf8e1cd9e400",
+                "reference": "5f0a873780c84d17fd438ab5e8f3cf8e1cd9e400",
+                "shasum": ""
+            },
+            "require": {
+                "zendframework/zend-test": "^3.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "LeoGalleguillos\\Flash\\": "src/",
+                    "LeoGalleguillos\\FlashTest\\": "test/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "time": "2017-12-08 21:06:35"
         },
         {
             "name": "leo-galleguillos/string",
@@ -2586,7 +2616,8 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "zendframework/zend-component-installer": 20,
-        "leo-galleguillos/string": 20
+        "leo-galleguillos/string": 20,
+        "leo-galleguillos/flash": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
