@@ -1,33 +1,82 @@
+.c-r {
+    color: red;
+}
+.ff-c {
+    font-family: Courier;
+}
+.mb-0 {
+    margin-bottom: 0;
+}
+a {
+    color: #00f;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
 body {
-    padding-top: 60px;
-    padding-bottom: 40px;
+    background-color: #eee;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    word-wrap: break-word;
+}
+footer {
+    background-color: #fff;
+    margin-top: 10px;
+}
+header {
+    background-color: #fff;
+    margin-bottom: 10px;
+}
+h1 {
+    margin: 0 0 16px 0;
+}
+input {
+    border: 1px solid #ddd;
+    background-color: #fff;
+    font-size: 16px;
+    outline: 0;
+    padding: 5px;
+}
+    input[type=submit] {
+        background-color: #eee;
+        border-radius: 5px;
+    }
+    input[type=submit]:active {
+        background-color: #fff;
+    }
+main .main-container {
+    background-color: #fff;
+    margin: 0 auto;
+    padding: 10px;
+    max-width: 970px;
+}
+main .main-container > :last-child {
+    margin-bottom: 0;
+}
+textarea {
+    font-size: 16px;
+    width: 90%;
+    height: 300px;
+    outline: 0;
+    padding: 5px;
 }
 
-.zf-green {
-    color: #68b604;
+.container {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
 }
 
-.btn-success {
-    background-color: #57a900;
-    background-image: -moz-linear-gradient(top, #70d900, #57a900);
-    background-image: -ms-linear-gradient(top, #70d900, #57a900);
-    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#70d900), to(#57a900));
-    background-image: -webkit-linear-gradient(top, #70d900, #57a900);
-    background-image: -o-linear-gradient(top, #70d900, #57a900);
-    background-image: linear-gradient(top, #70d900, #57a900);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#70d900', endColorstr='#57a900', GradientType=0);
+@media screen and (min-width: 1010px) {
+    .container {
+        max-width: 990px;
+        padding: 10px 0;
+    }
 }
 
-.btn-success:hover,
-.btn-success:active,
-.btn-success.active,
-.btn-success.disabled,
-.btn-success[disabled] {
-    background-color: #57a900;
-}
-
-div.container a.navbar-brand > img {
-    display: inline;
-    margin-right: 4px;
-    margin-top: -2px;
+@media screen and (max-width: 1009px) {
+    .container {
+        padding: 10px;
+    }
 }
