@@ -2,7 +2,9 @@
 namespace Application;
 
 use Application\Controller\Index as IndexController;
+use Application\Controller\Login as LoginController;
 use Application\Model\Factory\Controller\Index as IndexControllerFactory;
+use Application\Model\Factory\Controller\Login as LoginControllerFactory;
 use Zend\Router\Http\Literal;
 use Zend\Router\Http\Segment;
 use Zend\ServiceManager\Factory\InvokableFactory;
@@ -20,12 +22,12 @@ return [
                     ],
                 ],
             ],
-            'application' => [
-                'type'    => Segment::class,
+            'login' => [
+                'type'    => Literal::class,
                 'options' => [
-                    'route'    => '/application[/:action]',
+                    'route'    => '/login',
                     'defaults' => [
-                        'controller' => Controller\IndexController::class,
+                        'controller' => LoginController::class,
                         'action'     => 'index',
                     ],
                 ],
@@ -35,6 +37,7 @@ return [
     'controllers' => [
         'factories' => [
             IndexController::class => IndexControllerFactory::class,
+            LoginController::class => LoginControllerFactory::class,
         ],
     ],
     'view_manager' => [
