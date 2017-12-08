@@ -3,6 +3,7 @@ namespace Application\Model\Factory\Controller;
 
 use Application\Controller\Login as LoginController;
 use Interop\Container\ContainerInterface;
+use LeoGalleguillos\Flash\Model\Service\Flash as FlashService;
 use Zend\ServiceManager\Factory\FactoryInterface;
 
 class Login implements FactoryInterface
@@ -12,6 +13,8 @@ class Login implements FactoryInterface
         $requestedName,
         array $options = null
     ) {
-        return new LoginController();
+        return new LoginController(
+            $container->get(FlashService::class)
+        );
     }
 }
