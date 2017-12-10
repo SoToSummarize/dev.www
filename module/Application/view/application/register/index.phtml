@@ -1,31 +1,35 @@
-<div class="main-container">
-    <h1>Register</h1>
+<div class="main-container columns-1">
+    <div class="column column-1">
+        <div class="panel">
+            <h1>Register</h1>
 
-    <form action="/register" method="post">
-        <p>
-            Email<br>
-            <input type="text" name="email">
-        </p>
+            <form action="/register" method="post">
+                <p>
+                    Email<br>
+                    <input type="text" name="email">
+                </p>
 
-        <p>
-            Username<br>
-            <input type="text" name="username">
-        </p>
+                <p>
+                    Username<br>
+                    <input type="text" name="username">
+                </p>
 
-        <p>
-            Password<br>
-            <input type="text" name="password">
-        </p>
+                <p>
+                    Password<br>
+                    <input type="text" name="password">
+                </p>
 
-        <p>
-            Confirm Password<br>
-            <input type="text" name="confirm_password">
-        </p>
+                <p>
+                    Confirm Password<br>
+                    <input type="text" name="confirm_password">
+                </p>
 
-        <p class="mb-0"><input type="submit" value="Register"></p>
-    </form>
+                <p class="mb-0"><input type="submit" value="Register"></p>
+            </form>
 
-    <?php if ($message): ?>
-        <p class="c-r"><?= $this->escape($message); ?></p>
-    <?php endif ?>
+            <?php if ($message): ?>
+                <p class="c-r"><?= $this->escape($message); ?></p>
+            <?php endif ?>
+        </div>
+    </div>
 </div>

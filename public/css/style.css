@@ -46,14 +46,16 @@ input {
         background-color: #fff;
     }
 main .main-container {
-    background-color: #fff;
     margin: 0 auto;
+    max-width: 990px;
+}
+main .panel {
+    background-color: #fff;
     padding: 10px;
-    max-width: 970px;
 }
-main .main-container > :last-child {
-    margin-bottom: 0;
-}
+    main .panel > :last-child {
+        margin-bottom: 0;
+    }
 textarea {
     font-size: 16px;
     width: 90%;
@@ -73,10 +75,29 @@ textarea {
         max-width: 990px;
         padding: 10px 0;
     }
+    main .main-container.columns-2 {
+        display: flex;
+        justify-content: space-between;
+    }
+        main .main-container.columns-2 .column-1 {
+            width: 680px;
+        }
+        main .main-container.columns-2 .column-2 {
+            width: 300px;
+        }
 }
 
 @media screen and (max-width: 1009px) {
     .container {
         padding: 10px;
     }
+    main .main-container.columns-2 {
+    }
+        main .main-container.columns-2 .column-1 {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        main .main-container.columns-2 .column-2 {
+            width: 100%;
+        }
 }
