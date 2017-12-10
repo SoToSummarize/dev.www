@@ -66,6 +66,9 @@ ol.articles {
     list-style-type: none;
     padding: 0;
 }
+    ol.articles li+li {
+        margin-top: 10px;
+    }
 textarea {
     font-size: 16px;
     width: 90%;
