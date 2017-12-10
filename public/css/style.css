@@ -63,13 +63,6 @@ ol.articles {
     list-style-type: none;
     padding: 0;
 }
-    ol.articles li {
-        display: flex;
-    }
-        ol.articles li div.image {
-            width: 200px;
-            margin-right: 10px;
-        }
 textarea {
     font-size: 16px;
     width: 90%;
@@ -84,6 +77,9 @@ textarea {
     justify-content: space-between;
 }
 
+/**
+ * Desktop.
+ */
 @media screen and (min-width: 1010px) {
     .container {
         max-width: 990px;
@@ -99,8 +95,18 @@ textarea {
         main .main-container.columns-2 .column-2 {
             width: 300px;
         }
+    ol.articles li {
+        display: flex;
+    }
+        ol.articles li div.image {
+            width: 200px;
+            margin-right: 10px;
+        }
 }
 
+/**
+ * Tablet and mobile.
+ */
 @media screen and (max-width: 1009px) {
     .container {
         padding: 10px;
