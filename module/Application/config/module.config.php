@@ -4,9 +4,11 @@ namespace Application;
 use Application\Controller\Index as IndexController;
 use Application\Controller\Login as LoginController;
 use Application\Controller\Register as RegisterController;
+use Application\Controller\Summaries as SummariesController;
 use Application\Model\Factory\Controller\Index as IndexControllerFactory;
 use Application\Model\Factory\Controller\Login as LoginControllerFactory;
 use Application\Model\Factory\Controller\Register as RegisterControllerFactory;
+use Application\Model\Factory\Controller\Summaries as SummariesControllerFactory;
 use Zend\Router\Http\Literal;
 use Zend\Router\Http\Segment;
 use Zend\ServiceManager\Factory\InvokableFactory;
@@ -44,13 +46,24 @@ return [
                     ],
                 ],
             ],
+            'summaries' => [
+                'type'    => Segment::class,
+                'options' => [
+                    'route'    => '/summaries/:summaryId/:summarySlug',
+                    'defaults' => [
+                        'controller' => SummariesController::class,
+                        'action'     => 'view',
+                    ],
+                ],
+            ],
         ],
     ],
     'controllers' => [
         'factories' => [
-            IndexController::class => IndexControllerFactory::class,
-            LoginController::class => LoginControllerFactory::class,
-            RegisterController::class => RegisterControllerFactory::class,
+            IndexController::class     => IndexControllerFactory::class,
+            LoginController::class     => LoginControllerFactory::class,
+            RegisterController::class  => RegisterControllerFactory::class,
+            SummariesController::class => SummariesControllerFactory::class,
         ],
     ],
     'view_manager' => [
