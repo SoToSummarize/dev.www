@@ -1,7 +1,9 @@
 <div class="main-container columns-2">
     <div class="column column-1">
         <div class="panel">
-            <h1>Headline</h1>
+            <h1><?= $this->escape($summaryEntity->title); ?></h1>
+
+            <?= nl2br($summaryEntity->body); ?>
         </div>
     </div>
     <div class="column column-2">
