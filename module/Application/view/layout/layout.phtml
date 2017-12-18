@@ -1,10 +1,13 @@
+<?php
+$htmlHeadTitle = 'So, to summarize, ...';
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>So, to summarize, ...</title>
+        <title><?= $this->escape($htmlHeadTitle); ?></title>
 
         <link href="/css/style.css?v=2017121301" rel="stylesheet">
         <link href="/css/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
