@@ -4,6 +4,7 @@ namespace Application\Model\Factory\Controller;
 use Application\Controller\Summaries as SummariesController;
 use Interop\Container\ContainerInterface;
 use LeoGalleguillos\Summary\Model\Factory\Summary as SummaryFactory;
+use LeoGalleguillos\Summary\Model\Service\Summary as SummaryService;
 use Zend\ServiceManager\Factory\FactoryInterface;
 
 class Summaries implements FactoryInterface
@@ -14,7 +15,8 @@ class Summaries implements FactoryInterface
         array $options = null
     ) {
         return new SummariesController(
-            $container->get(SummaryFactory::class)
+            $container->get(SummaryFactory::class),
+            $container->get(SummaryService::class)
         );
     }
 }
