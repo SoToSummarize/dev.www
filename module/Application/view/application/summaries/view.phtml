@@ -2,11 +2,17 @@
 $this->layout()->setVariables([
     'htmlHeadTitle' => $this->summaryHtmlHeadTitle()->getHtmlHeadTitle($summaryEntity),
 ]);
+$youtubeUrl = $sourceEntities[0]->url;
+$queryString = parse_url($youtubeUrl)['query'];
+parse_str($queryString, $result);
+$youtubeVideoId = $result['v'];
 ?>
 <div class="main-container columns-2">
     <div class="column column-1">
         <div class="panel">
             <h1><?= $this->escape($summaryEntity->title); ?></h1>
+
+            <iframe class="youtube" src="https://www.youtube.com/embed/<?= $youtubeVideoId ?>" allowfullscreen></iframe>
 
             <?= nl2br($summaryEntity->body); ?>
         </div>

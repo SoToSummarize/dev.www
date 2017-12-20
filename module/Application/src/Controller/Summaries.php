@@ -22,8 +22,8 @@ class Summaries extends AbstractActionController
         $sourceEntities = $this->summaryService->getSourceEntities($summaryEntity);
 
         return [
-            'summaryEntity'   => $summaryEntity,
-            'sourceEntitites' => $sourceEntities,
+            'summaryEntity'  => $summaryEntity,
+            'sourceEntities' => $sourceEntities,
         ];
     }
 }
