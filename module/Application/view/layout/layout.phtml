@@ -6,6 +6,9 @@ $htmlHeadTitle = $htmlHeadTitle ?? 'So, to summarize, ...';
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta property="fb:app_id" content="1948337572154804">
+        <meta property="og:title" content="<?= $this->escape($htmlHeadTitle); ?>">
+        <meta property="og:url" content="<?= $this->escape($this->serverUrl(true)); ?>">
 
         <title><?= $this->escape($htmlHeadTitle); ?></title>
 
