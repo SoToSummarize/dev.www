@@ -19,6 +19,7 @@ $htmlHeadTitle = $htmlHeadTitle ?? 'So, to summarize, ...';
 <?php if (isset($htmlHeadMetaOgImageWidth)): ?>
         <meta property="og:image:width" content="<?= $this->escape($htmlHeadMetaOgImageWidth); ?>">
 <?php endif ?>
+        <meta property="og:site_name" content="So, to summarize, ...">
         <meta property="og:title" content="<?= $this->escape($htmlHeadTitle); ?>">
 <?php if (isset($htmlHeadMetaOgType)): ?>
         <meta property="og:type" content="<?= $this->escape($htmlHeadMetaOgType); ?>">
