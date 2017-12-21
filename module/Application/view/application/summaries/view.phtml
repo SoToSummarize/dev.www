@@ -1,6 +1,8 @@
 <?php
 $this->layout()->setVariables([
-    'htmlHeadTitle' => $this->summaryHtmlHeadTitle()->getHtmlHeadTitle($summaryEntity),
+    'htmlHeadMetaOgDescription' => $this->summaryOg()->getOgDescription($summaryEntity),
+    'htmlHeadMetaOgType'        => $this->summaryOg()->getOgType($summaryEntity),
+    'htmlHeadTitle'             => $this->summaryHtmlHeadTitle()->getHtmlHeadTitle($summaryEntity),
 ]);
 $youtubeUrl = $sourceEntities[0]->url;
 $queryString = parse_url($youtubeUrl)['query'];
