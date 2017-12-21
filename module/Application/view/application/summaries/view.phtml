@@ -11,6 +11,9 @@ $youtubeUrl = $sourceEntities[0]->url;
 $queryString = parse_url($youtubeUrl)['query'];
 parse_str($queryString, $result);
 $youtubeVideoId = $result['v'];
+
+$facebookShareUrlHelper = $this->facebookShareUrl();
+
 ?>
 <div class="main-container columns-2">
     <div class="column column-1">
@@ -27,7 +30,7 @@ $youtubeVideoId = $result['v'];
             <h2>Share</h2>
 
             <ol class="social-media">
-                <li><a href="https://www.facebook.com/So-to-summarize-1139908682809955/" target="_blank"><i class="fa fa-facebook fa-fw" aria-hidden="true"></i></a></li>
+                <li><a href="<?= $facebookShareUrlHelper->getFacebookShareUrl($summaryEntity); ?>" target="_blank"><i class="fa fa-facebook fa-fw" aria-hidden="true"></i></a></li>
                 <li><a href="https://twitter.com/SoTosummarize" target="_blank"><i class="fa fa-twitter fa-fw" aria-hidden="true"></i></a></li>
             </ol>
         </div>
