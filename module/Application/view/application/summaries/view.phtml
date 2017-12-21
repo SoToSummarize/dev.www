@@ -2,6 +2,8 @@
 $this->layout()->setVariables([
     'htmlHeadMetaOgDescription' => $this->summaryOg()->getOgDescription($summaryEntity),
     'htmlHeadMetaOgImage'       => $this->summaryOg()->getOgImage($summaryEntity),
+    'htmlHeadMetaOgImageHeight' => $this->summaryOg()->getOgImageHeight($summaryEntity),
+    'htmlHeadMetaOgImageWidth'  => $this->summaryOg()->getOgImageWidth($summaryEntity),
     'htmlHeadMetaOgType'        => $this->summaryOg()->getOgType($summaryEntity),
     'htmlHeadTitle'             => $this->summaryHtmlHeadTitle()->getHtmlHeadTitle($summaryEntity),
 ]);
