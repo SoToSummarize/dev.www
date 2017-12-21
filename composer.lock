@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "35c7356eac5dd8a25ec8b36b735ab154",
-    "content-hash": "c97446a2855e17af8aedbabe92f71acd",
+    "hash": "0dde6af9ddaa43c78f6257db75d96b18",
+    "content-hash": "dd2d012aac3350ffff6fd1ba82ecce5c",
     "packages": [
         {
             "name": "container-interop/container-interop",
@@ -123,6 +123,36 @@
             "time": "2017-12-08 21:06:35"
         },
         {
+            "name": "leo-galleguillos/image",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/LeoGalleguillos/Image.git",
+                "reference": "ea511c1a39e164613543d9249a662ac4d2f6aaa5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/LeoGalleguillos/Image/zipball/ea511c1a39e164613543d9249a662ac4d2f6aaa5",
+                "reference": "ea511c1a39e164613543d9249a662ac4d2f6aaa5",
+                "shasum": ""
+            },
+            "require": {
+                "zendframework/zend-test": "^3.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "LeoGalleguillos\\Image\\": "src/",
+                    "LeoGalleguillos\\ImageTest\\": "test/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "time": "2017-12-21 06:27:16"
+        },
+        {
             "name": "leo-galleguillos/string",
             "version": "dev-master",
             "source": {
@@ -158,12 +188,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/LeoGalleguillos/Summary.git",
-                "reference": "953abfb46fe6a6e9ed341bf6ac60b15f566c81d1"
+                "reference": "4c38f49e67c6ece494482e1197578990ae6bbae3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/LeoGalleguillos/Summary/zipball/953abfb46fe6a6e9ed341bf6ac60b15f566c81d1",
-                "reference": "953abfb46fe6a6e9ed341bf6ac60b15f566c81d1",
+                "url": "https://api.github.com/repos/LeoGalleguillos/Summary/zipball/4c38f49e67c6ece494482e1197578990ae6bbae3",
+                "reference": "4c38f49e67c6ece494482e1197578990ae6bbae3",
                 "shasum": ""
             },
             "require": {
@@ -181,7 +211,7 @@
             "license": [
                 "MIT"
             ],
-            "time": "2017-12-21 05:08:31"
+            "time": "2017-12-21 05:36:32"
         },
         {
             "name": "myclabs/deep-copy",
@@ -2730,7 +2760,8 @@
         "zendframework/zend-component-installer": 20,
         "leo-galleguillos/string": 20,
         "leo-galleguillos/flash": 20,
-        "leo-galleguillos/summary": 20
+        "leo-galleguillos/summary": 20,
+        "leo-galleguillos/image": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
