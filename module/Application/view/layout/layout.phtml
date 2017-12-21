@@ -10,6 +10,9 @@ $htmlHeadTitle = $htmlHeadTitle ?? 'So, to summarize, ...';
 <?php if (isset($htmlHeadMetaOgDescription)): ?>
         <meta property="og:description" content="<?= $this->escape($htmlHeadMetaOgDescription); ?>">
 <?php endif ?>
+<?php if (isset($htmlHeadMetaOgImage)): ?>
+        <meta property="og:image" content="<?= $this->escape($htmlHeadMetaOgImage); ?>">
+<?php endif ?>
         <meta property="og:title" content="<?= $this->escape($htmlHeadTitle); ?>">
 <?php if (isset($htmlHeadMetaOgType)): ?>
         <meta property="og:type" content="<?= $this->escape($htmlHeadMetaOgType); ?>">
