@@ -16,6 +16,7 @@
         "zendframework/zend-component-installer": "^1.0 || ^0.7 || ^1.0.0-dev@dev",
         "zendframework/zend-mvc": "^3.0.1",
         "zfcampus/zf-development-mode": "^3.0",
+        "leo-galleguillos/facebook": "dev-master",
         "leo-galleguillos/string": "dev-master",
         "leo-galleguillos/flash": "dev-master",
         "leo-galleguillos/summary": "dev-master",

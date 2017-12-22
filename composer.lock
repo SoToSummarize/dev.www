@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "0dde6af9ddaa43c78f6257db75d96b18",
-    "content-hash": "dd2d012aac3350ffff6fd1ba82ecce5c",
+    "hash": "e9c58c5ed110bb239657b28d500bc9ef",
+    "content-hash": "c1fa8f414f02d4d53674d43046fd8b30",
     "packages": [
         {
             "name": "container-interop/container-interop",
@@ -91,6 +91,36 @@
                 "instantiate"
             ],
             "time": "2015-06-14 21:17:01"
+        },
+        {
+            "name": "leo-galleguillos/facebook",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/LeoGalleguillos/Facebook.git",
+                "reference": "de7c430b73803b5bb80023373401513a7d77ff24"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/LeoGalleguillos/Facebook/zipball/de7c430b73803b5bb80023373401513a7d77ff24",
+                "reference": "de7c430b73803b5bb80023373401513a7d77ff24",
+                "shasum": ""
+            },
+            "require": {
+                "zendframework/zend-test": "^3.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "LeoGalleguillos\\Facebook\\": "src/",
+                    "LeoGalleguillos\\FacebookTest\\": "test/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "time": "2017-12-22 16:38:27"
         },
         {
             "name": "leo-galleguillos/flash",
@@ -1065,16 +1095,16 @@
         },
         {
             "name": "sebastian/comparator",
-            "version": "2.1.0",
+            "version": "2.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/comparator.git",
-                "reference": "1174d9018191e93cb9d719edec01257fc05f8158"
+                "reference": "b11c729f95109b56a0fe9650c6a63a0fcd8c439f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/comparator/zipball/1174d9018191e93cb9d719edec01257fc05f8158",
-                "reference": "1174d9018191e93cb9d719edec01257fc05f8158",
+                "url": "https://api.github.com/repos/sebastianbergmann/comparator/zipball/b11c729f95109b56a0fe9650c6a63a0fcd8c439f",
+                "reference": "b11c729f95109b56a0fe9650c6a63a0fcd8c439f",
                 "shasum": ""
             },
             "require": {
@@ -1125,7 +1155,7 @@
                 "compare",
                 "equality"
             ],
-            "time": "2017-11-03 07:16:52"
+            "time": "2017-12-22 14:50:35"
         },
         {
             "name": "sebastian/diff",
@@ -2760,6 +2790,7 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "zendframework/zend-component-installer": 20,
+        "leo-galleguillos/facebook": 20,
         "leo-galleguillos/string": 20,
         "leo-galleguillos/flash": 20,
         "leo-galleguillos/summary": 20,
