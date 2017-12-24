@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'LeoGalleguillos\Facebook',
     'LeoGalleguillos\Flash',
     'LeoGalleguillos\String',
     'LeoGalleguillos\Summary',
