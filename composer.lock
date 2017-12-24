@@ -98,12 +98,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/LeoGalleguillos/Facebook.git",
-                "reference": "de7c430b73803b5bb80023373401513a7d77ff24"
+                "reference": "5644dd5a3bfd9283a2e59efed6405f83e1d70e05"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/LeoGalleguillos/Facebook/zipball/de7c430b73803b5bb80023373401513a7d77ff24",
-                "reference": "de7c430b73803b5bb80023373401513a7d77ff24",
+                "url": "https://api.github.com/repos/LeoGalleguillos/Facebook/zipball/5644dd5a3bfd9283a2e59efed6405f83e1d70e05",
+                "reference": "5644dd5a3bfd9283a2e59efed6405f83e1d70e05",
                 "shasum": ""
             },
             "require": {
@@ -120,7 +120,7 @@
             "license": [
                 "MIT"
             ],
-            "time": "2017-12-22 16:38:27"
+            "time": "2017-12-24 15:41:57"
         },
         {
             "name": "leo-galleguillos/flash",
