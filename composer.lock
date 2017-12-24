@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "e9c58c5ed110bb239657b28d500bc9ef",
-    "content-hash": "c1fa8f414f02d4d53674d43046fd8b30",
+    "hash": "66313e87db6d6684222df6319c26e137",
+    "content-hash": "a9992303d9796ca14faf93a0563135f7",
     "packages": [
         {
             "name": "container-interop/container-interop",
@@ -244,6 +244,36 @@
                 "MIT"
             ],
             "time": "2017-12-21 21:50:36"
+        },
+        {
+            "name": "leo-galleguillos/twitter",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/LeoGalleguillos/Twitter.git",
+                "reference": "fff69b26e2acc3c5d851a516d87845ba89b328e3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/LeoGalleguillos/Twitter/zipball/fff69b26e2acc3c5d851a516d87845ba89b328e3",
+                "reference": "fff69b26e2acc3c5d851a516d87845ba89b328e3",
+                "shasum": ""
+            },
+            "require": {
+                "zendframework/zend-test": "^3.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "LeoGalleguillos\\Twitter\\": "src/",
+                    "LeoGalleguillos\\TwitterTest\\": "test/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "time": "2017-12-24 14:56:27"
         },
         {
             "name": "myclabs/deep-copy",
@@ -2794,7 +2824,8 @@
         "leo-galleguillos/string": 20,
         "leo-galleguillos/flash": 20,
         "leo-galleguillos/summary": 20,
-        "leo-galleguillos/image": 20
+        "leo-galleguillos/image": 20,
+        "leo-galleguillos/twitter": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,

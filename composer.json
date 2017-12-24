@@ -20,7 +20,8 @@
         "leo-galleguillos/string": "dev-master",
         "leo-galleguillos/flash": "dev-master",
         "leo-galleguillos/summary": "dev-master",
-        "leo-galleguillos/image": "dev-master"
+        "leo-galleguillos/image": "dev-master",
+        "leo-galleguillos/twitter": "dev-master"
     },
     "autoload": {
         "psr-4": {
