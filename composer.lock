@@ -251,12 +251,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/LeoGalleguillos/Twitter.git",
-                "reference": "b8a61993b0743ce93dedebe799ec3202020f0cb3"
+                "reference": "a3a935d15c9302106f034a7bf7c85490b71101cc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/LeoGalleguillos/Twitter/zipball/b8a61993b0743ce93dedebe799ec3202020f0cb3",
-                "reference": "b8a61993b0743ce93dedebe799ec3202020f0cb3",
+                "url": "https://api.github.com/repos/LeoGalleguillos/Twitter/zipball/a3a935d15c9302106f034a7bf7c85490b71101cc",
+                "reference": "a3a935d15c9302106f034a7bf7c85490b71101cc",
                 "shasum": ""
             },
             "require": {
@@ -273,7 +273,7 @@
             "license": [
                 "MIT"
             ],
-            "time": "2017-12-25 00:50:37"
+            "time": "2017-12-25 01:40:54"
         },
         {
             "name": "myclabs/deep-copy",
