@@ -9,9 +9,13 @@ use Application\Model\Factory\Controller\Index as IndexControllerFactory;
 use Application\Model\Factory\Controller\Login as LoginControllerFactory;
 use Application\Model\Factory\Controller\Register as RegisterControllerFactory;
 use Application\Model\Factory\Controller\Summaries as SummariesControllerFactory;
+use LeoGalleguillos\Facebook\View\Helper\ShareUrl as FacebookShareUrlHelper;
+use LeoGalleguillos\Summary\View\Helper\Summary\FacebookShareUrl as SummaryFacebookShareUrlHelper;
+use LeoGalleguillos\Twitter\View\Helper\ShareUrl as TwitterShareUrlHelper;
 use Zend\Router\Http\Literal;
 use Zend\Router\Http\Segment;
 use Zend\ServiceManager\Factory\InvokableFactory;
+
 
 return [
     'router' => [
@@ -64,6 +68,13 @@ return [
             LoginController::class     => LoginControllerFactory::class,
             RegisterController::class  => RegisterControllerFactory::class,
             SummariesController::class => SummariesControllerFactory::class,
+        ],
+    ],
+    'view_helpers' => [
+        'aliases' => [
+            'facebookShareUrl' => FacebookShareUrlHelper::class,
+            'summaryFacebookShareUrl'  => SummaryFacebookShareUrlHelper::class,
+            'twitterShareUrl'  => TwitterShareUrlHelper::class,
         ],
     ],
     'view_manager' => [
