@@ -218,17 +218,19 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/LeoGalleguillos/Summary.git",
-                "reference": "4b889a673212b0146af8881920ff45b8c40c0bda"
+                "reference": "934966695a9e9fdd0c6eac8dd0432d7a5a57a2d7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/LeoGalleguillos/Summary/zipball/4b889a673212b0146af8881920ff45b8c40c0bda",
-                "reference": "4b889a673212b0146af8881920ff45b8c40c0bda",
+                "url": "https://api.github.com/repos/LeoGalleguillos/Summary/zipball/934966695a9e9fdd0c6eac8dd0432d7a5a57a2d7",
+                "reference": "934966695a9e9fdd0c6eac8dd0432d7a5a57a2d7",
                 "shasum": ""
             },
             "require": {
+                "leo-galleguillos/facebook": "dev-master",
                 "leo-galleguillos/image": "dev-master",
                 "leo-galleguillos/string": "dev-master",
+                "leo-galleguillos/twitter": "dev-master",
                 "zendframework/zend-db": "^2.9",
                 "zendframework/zend-test": "^3.1"
             },
@@ -243,7 +245,7 @@
             "license": [
                 "MIT"
             ],
-            "time": "2017-12-21 21:50:36"
+            "time": "2017-12-26 15:11:41"
         },
         {
             "name": "leo-galleguillos/twitter",
