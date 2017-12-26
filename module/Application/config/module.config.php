@@ -11,6 +11,7 @@ use Application\Model\Factory\Controller\Register as RegisterControllerFactory;
 use Application\Model\Factory\Controller\Summaries as SummariesControllerFactory;
 use LeoGalleguillos\Facebook\View\Helper\ShareUrl as FacebookShareUrlHelper;
 use LeoGalleguillos\Summary\View\Helper\Summary\FacebookShareUrl as SummaryFacebookShareUrlHelper;
+use LeoGalleguillos\Summary\View\Helper\Summary\TwitterShareUrl as SummaryTwitterShareUrlHelper;
 use LeoGalleguillos\Twitter\View\Helper\ShareUrl as TwitterShareUrlHelper;
 use Zend\Router\Http\Literal;
 use Zend\Router\Http\Segment;
@@ -72,9 +73,10 @@ return [
     ],
     'view_helpers' => [
         'aliases' => [
-            'facebookShareUrl' => FacebookShareUrlHelper::class,
-            'summaryFacebookShareUrl'  => SummaryFacebookShareUrlHelper::class,
-            'twitterShareUrl'  => TwitterShareUrlHelper::class,
+            'facebookShareUrl'        => FacebookShareUrlHelper::class,
+            'summaryFacebookShareUrl' => SummaryFacebookShareUrlHelper::class,
+            'summaryTwitterShareUrl'  => SummaryTwitterShareUrlHelper::class,
+            'twitterShareUrl'         => TwitterShareUrlHelper::class,
         ],
     ],
     'view_manager' => [

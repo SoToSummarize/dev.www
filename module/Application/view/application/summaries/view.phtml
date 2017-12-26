@@ -13,6 +13,7 @@ parse_str($queryString, $result);
 $youtubeVideoId = $result['v'];
 
 $summaryFacebookShareUrlHelper = $this->summaryFacebookShareUrl();
+$summaryTwitterShareUrlHelper  = $this->summaryTwitterShareUrl();
 
 ?>
 <div class="main-container columns-2">
@@ -30,8 +31,12 @@ $summaryFacebookShareUrlHelper = $this->summaryFacebookShareUrl();
             <h2>Share</h2>
 
             <ol class="social-media">
-                <li><a href="<?= $summaryFacebookShareUrlHelper->getFacebookShareUrl($summaryEntity); ?>" target="_blank"><i class="fa fa-facebook fa-fw" aria-hidden="true"></i></a></li>
-                <li><a href="https://twitter.com/SoTosummarize" target="_blank"><i class="fa fa-twitter fa-fw" aria-hidden="true"></i></a></li>
+                <li>
+                    <a href="<?= $summaryFacebookShareUrlHelper->getFacebookShareUrl($summaryEntity); ?>" target="_blank"><i class="fa fa-facebook fa-fw" aria-hidden="true"></i></a>
+                </li>
+                <li>
+                    <a href="<?= $summaryTwitterShareUrlHelper->getTwitterShareUrl($summaryEntity); ?>" target="_blank"><i class="fa fa-twitter fa-fw" aria-hidden="true"></i></a>
+                </li>
             </ol>
         </div>
     </div>
