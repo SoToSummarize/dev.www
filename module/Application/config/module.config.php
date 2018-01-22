@@ -1,11 +1,10 @@
 <?php
 namespace Application;
 
-use Application\Controller\Index as IndexController;
+use Application\Controller as ApplicationController;
 use Application\Controller\Login as LoginController;
 use Application\Controller\Register as RegisterController;
 use Application\Controller\Summaries as SummariesController;
-use Application\Model\Factory\Controller\Index as IndexControllerFactory;
 use Application\Model\Factory\Controller\Login as LoginControllerFactory;
 use Application\Model\Factory\Controller\Register as RegisterControllerFactory;
 use Application\Model\Factory\Controller\Summaries as SummariesControllerFactory;
@@ -26,7 +25,7 @@ return [
                 'options' => [
                     'route'    => '/',
                     'defaults' => [
-                        'controller' => IndexController::class,
+                        'controller' => ApplicationController\Index::class,
                         'action'     => 'index',
                     ],
                 ],
@@ -65,8 +64,8 @@ return [
     ],
     'controllers' => [
         'factories' => [
-            IndexController::class     => function ($serviceManager) {
-                return new IndexController();
+            ApplicationController\Index::class     => function ($serviceManager) {
+                return new ApplicationController\Index();
             },
             LoginController::class     => LoginControllerFactory::class,
             RegisterController::class  => RegisterControllerFactory::class,
