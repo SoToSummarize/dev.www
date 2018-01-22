@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "9eb1cc8bd6e61281676c4cc0a97c4fb0",
-    "content-hash": "ca48b6562d31f59df7a07e4c4e6e5e43",
+    "hash": "8292c840665b254a995881653e4d5c0e",
+    "content-hash": "eeabbe3e97c61975d56f4d42cd4c9e67",
     "packages": [
         {
             "name": "container-interop/container-interop",
@@ -276,6 +276,37 @@
                 "MIT"
             ],
             "time": "2017-12-25 01:40:54"
+        },
+        {
+            "name": "leo-galleguillos/website",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/LeoGalleguillos/Website.git",
+                "reference": "5ea9c781c13b69e08ec95d85fab5a33a86f85cb2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/LeoGalleguillos/Website/zipball/5ea9c781c13b69e08ec95d85fab5a33a86f85cb2",
+                "reference": "5ea9c781c13b69e08ec95d85fab5a33a86f85cb2",
+                "shasum": ""
+            },
+            "require": {
+                "zendframework/zend-db": "^2.9",
+                "zendframework/zend-test": "^3.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "LeoGalleguillos\\Website\\": "src/",
+                    "LeoGalleguillos\\WebsiteTest\\": "test/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "time": "2018-01-22 15:31:31"
         },
         {
             "name": "myclabs/deep-copy",
@@ -2778,7 +2809,8 @@
         "leo-galleguillos/flash": 20,
         "leo-galleguillos/summary": 20,
         "leo-galleguillos/image": 20,
-        "leo-galleguillos/twitter": 20
+        "leo-galleguillos/twitter": 20,
+        "leo-galleguillos/website": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
