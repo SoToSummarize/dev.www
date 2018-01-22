@@ -28,6 +28,45 @@ $this->layout()->setVariables([
                 <?php endforeach ?>
             </ol>
         </div>
+        <div class="panel">
+            <h2>N-Grams</h2>
+
+            <ol>
+                <?php $count = 0;?>
+                <?php foreach ($nGrams[4] as $key => $nGram): ?>
+                    <li><?= $this->escape($key); ?></li>
+                    <?php if ($count >= 9) {break;} ?>
+                    <?php $count++; ?>
+                <?php endforeach ?>
+            </ol>
+
+            <ol>
+                <?php $count = 0;?>
+                <?php foreach ($nGrams[3] as $key => $nGram): ?>
+                    <li><?= $this->escape($key); ?></li>
+                    <?php if ($count >= 9) {break;} ?>
+                    <?php $count++; ?>
+                <?php endforeach ?>
+            </ol>
+
+            <ol>
+                <?php $count = 0;?>
+                <?php foreach ($nGrams[2] as $key => $nGram): ?>
+                    <li><?= $this->escape($key); ?></li>
+                    <?php if ($count >= 9) {break;} ?>
+                    <?php $count++; ?>
+                <?php endforeach ?>
+            </ol>
+
+            <ol>
+                <?php $count = 0;?>
+                <?php foreach ($nGrams[1] as $key => $nGram): ?>
+                    <li><?= $this->escape($key); ?></li>
+                    <?php if ($count >= 9) {break;} ?>
+                    <?php $count++; ?>
+                <?php endforeach ?>
+            </ol>
+        </div>
     </div>
     <div class="column column-2">
         <div class="panel follow">

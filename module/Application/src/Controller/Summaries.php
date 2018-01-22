@@ -37,7 +37,9 @@ class Summaries extends AbstractActionController
         $nGrams = $this->nGramsSortedByCountService->getNGramsSortedByCount(
             $this->wordsOnlyService->getWordsOnly(
                 $summaryEntity->getWebpage()->getHtml()->getString()
-            )
+            ),
+            1,
+            4
         );
 
         return [
