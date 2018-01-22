@@ -69,7 +69,9 @@ return [
             },
             LoginController::class     => LoginControllerFactory::class,
             RegisterController::class  => RegisterControllerFactory::class,
-            SummariesController::class => SummariesControllerFactory::class,
+            ApplicationController\Summaries::class => function ($serviceManager) {
+                return new ApplicationController\Summaries();
+            }
         ],
     ],
     'view_helpers' => [

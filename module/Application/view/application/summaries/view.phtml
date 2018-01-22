@@ -1,4 +1,5 @@
 <?php
+/**
 $this->layout()->setVariables([
     'htmlHeadMetaOgDescription' => $this->summaryOg()->getOgDescription($summaryEntity),
     'htmlHeadMetaOgImage'       => $this->summaryOg()->getOgImage($summaryEntity),
@@ -15,29 +16,19 @@ $youtubeVideoId = $result['v'];
 $summaryFacebookShareUrlHelper = $this->summaryFacebookShareUrl();
 $summaryTwitterShareUrlHelper  = $this->summaryTwitterShareUrl();
 
+ */
 ?>
 <div class="main-container columns-2">
     <div class="column column-1">
         <div class="panel">
-            <h1><?= $this->escape($summaryEntity->title); ?></h1>
-
-            <iframe class="youtube" src="https://www.youtube.com/embed/<?= $youtubeVideoId ?>" allowfullscreen></iframe>
-
-            <?= nl2br($summaryEntity->body); ?>
+            <h1>Wonderful</h1>
         </div>
     </div>
     <div class="column column-2">
         <div class="panel follow">
-            <h2>Share</h2>
+            <h2>Details</h2>
 
-            <ol class="social-media">
-                <li>
-                    <a href="<?= $summaryFacebookShareUrlHelper->getFacebookShareUrl($summaryEntity); ?>" target="_blank"><i class="fa fa-facebook fa-fw" aria-hidden="true"></i></a>
-                </li>
-                <li>
-                    <a href="<?= $summaryTwitterShareUrlHelper->getTwitterShareUrl($summaryEntity); ?>" target="_blank"><i class="fa fa-twitter fa-fw" aria-hidden="true"></i></a>
-                </li>
-            </ol>
+            <h3>URL</h3>
         </div>
     </div>
 </div>
