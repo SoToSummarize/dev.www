@@ -9,6 +9,8 @@ use Application\Model\Factory\Controller\Login as LoginControllerFactory;
 use Application\Model\Factory\Controller\Register as RegisterControllerFactory;
 use Application\Model\Factory\Controller\Summaries as SummariesControllerFactory;
 use LeoGalleguillos\Facebook\View\Helper\ShareUrl as FacebookShareUrlHelper;
+use LeoGalleguillos\Sentence\Model\Service as SentenceService;
+use LeoGalleguillos\Summary\Model\Factory as SummaryFactory;
 use LeoGalleguillos\Summary\View\Helper\Summary\FacebookShareUrl as SummaryFacebookShareUrlHelper;
 use LeoGalleguillos\Summary\View\Helper\Summary\TwitterShareUrl as SummaryTwitterShareUrlHelper;
 use LeoGalleguillos\Twitter\View\Helper\ShareUrl as TwitterShareUrlHelper;
@@ -70,7 +72,10 @@ return [
             LoginController::class     => LoginControllerFactory::class,
             RegisterController::class  => RegisterControllerFactory::class,
             ApplicationController\Summaries::class => function ($serviceManager) {
-                return new ApplicationController\Summaries();
+                return new ApplicationController\Summaries(
+                    $serviceManager->get(SentenceService\Variations::class),
+                    $serviceManager->get(SummaryFactory\Summary::class)
+                );
             }
         ],
     ],

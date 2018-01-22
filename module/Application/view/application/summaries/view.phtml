@@ -23,12 +23,22 @@ $summaryTwitterShareUrlHelper  = $this->summaryTwitterShareUrl();
         <div class="panel">
             <h1>Wonderful</h1>
         </div>
+        <div class="panel">
+            <h2>Titles</h1>
+
+            <ol>
+                <?php foreach ($titleVariations as $titleVariation): ?>
+                    <li><?= $this->escape($titleVariation); ?></li>
+                <?php endforeach ?>
+            </ol>
+        </div>
     </div>
     <div class="column column-2">
         <div class="panel follow">
             <h2>Details</h2>
 
             <h3>URL</h3>
+            <?= $this->escape($summaryEntity->getWebpage()->getUrl()); ?>
         </div>
     </div>
 </div>

@@ -1,17 +1,36 @@
 <?php
 namespace Application\Controller;
 
-use LeoGalleguillos\Summary\Model\Factory\Summary as SummaryFactory;
-use LeoGalleguillos\Summary\Model\Service\Summary as SummaryService;
+use LeoGalleguillos\Sentence\Model\Service as SentenceService;
+use LeoGalleguillos\Summary\Model\Factory as SummaryFactory;
 use Zend\Mvc\Controller\AbstractActionController;
 
 class Summaries extends AbstractActionController
 {
     public function __construct(
+        SentenceService\Variations $variationsService,
+        SummaryFactory\Summary $summaryFactory
     ) {
+        $this->variationsService = $variationsService;
+        $this->summaryFactory    = $summaryFactory;
     }
 
     public function viewAction()
     {
+        $summaryId = $this->params()->fromRoute('summaryId');
+        $summaryEntity = $this->summaryFactory->buildFromSummaryId(
+            $summaryId
+        );
+
+        $titleVariations = $this->variationsService->getVariations(
+            $summaryEntity->getWebpage()->getTitle(),
+            3,
+            strlen($summaryEntity->getWebpage()->getTitle())
+        );
+
+        return [
+            'summaryEntity' => $summaryEntity,
+            'titleVariations' => $titleVariations,
+        ];
     }
 }
