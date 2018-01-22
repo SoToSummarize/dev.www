@@ -9,7 +9,9 @@ use Application\Model\Factory\Controller\Login as LoginControllerFactory;
 use Application\Model\Factory\Controller\Register as RegisterControllerFactory;
 use Application\Model\Factory\Controller\Summaries as SummariesControllerFactory;
 use LeoGalleguillos\Facebook\View\Helper\ShareUrl as FacebookShareUrlHelper;
+use LeoGalleguillos\Html\Model\Service as HtmlService;
 use LeoGalleguillos\Sentence\Model\Service as SentenceService;
+use LeoGalleguillos\String\Model\Service as StringService;
 use LeoGalleguillos\Summary\Model\Factory as SummaryFactory;
 use LeoGalleguillos\Summary\View\Helper\Summary\FacebookShareUrl as SummaryFacebookShareUrlHelper;
 use LeoGalleguillos\Summary\View\Helper\Summary\TwitterShareUrl as SummaryTwitterShareUrlHelper;
@@ -73,7 +75,9 @@ return [
             RegisterController::class  => RegisterControllerFactory::class,
             ApplicationController\Summaries::class => function ($serviceManager) {
                 return new ApplicationController\Summaries(
+                    $serviceManager->get(HtmlService\WordsOnly::class),
                     $serviceManager->get(SentenceService\Variations::class),
+                    $serviceManager->get(StringService\NGrams\SortedByCount::class),
                     $serviceManager->get(SummaryFactory\Summary::class)
                 );
             }

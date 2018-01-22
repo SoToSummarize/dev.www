@@ -1,18 +1,24 @@
 <?php
 namespace Application\Controller;
 
+use LeoGalleguillos\Html\Model\Service as HtmlService;
 use LeoGalleguillos\Sentence\Model\Service as SentenceService;
+use LeoGalleguillos\String\Model\Service as StringService;
 use LeoGalleguillos\Summary\Model\Factory as SummaryFactory;
 use Zend\Mvc\Controller\AbstractActionController;
 
 class Summaries extends AbstractActionController
 {
     public function __construct(
+        HtmlService\WordsOnly $wordsOnlyService,
         SentenceService\Variations $variationsService,
+        StringService\NGrams\SortedByCount $nGramsSortedByCountService,
         SummaryFactory\Summary $summaryFactory
     ) {
-        $this->variationsService = $variationsService;
-        $this->summaryFactory    = $summaryFactory;
+        $this->wordsOnlyService           = $wordsOnlyService;
+        $this->variationsService          = $variationsService;
+        $this->nGramsSortedByCountService = $nGramsSortedByCountService;
+        $this->summaryFactory             = $summaryFactory;
     }
 
     public function viewAction()
@@ -28,8 +34,15 @@ class Summaries extends AbstractActionController
             strlen($summaryEntity->getWebpage()->getTitle())
         );
 
+        $nGrams = $this->nGramsSortedByCountService->getNGramsSortedByCount(
+            $this->wordsOnlyService->getWordsOnly(
+                $summaryEntity->getWebpage()->getHtml()->getString()
+            )
+        );
+
         return [
-            'summaryEntity' => $summaryEntity,
+            'nGrams'          => $nGrams,
+            'summaryEntity'   => $summaryEntity,
             'titleVariations' => $titleVariations,
         ];
     }
