@@ -30,7 +30,7 @@ class Summaries extends AbstractActionController
 
         $titleVariations = $this->variationsService->getVariations(
             $summaryEntity->getWebpage()->getTitle(),
-            3,
+            5,
             strlen($summaryEntity->getWebpage()->getTitle())
         );
 
