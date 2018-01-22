@@ -67,6 +67,7 @@ main .main-container {
 main .panel {
     background-color: #fff;
     padding: 10px;
+    overflow: hidden;
 }
     main .panel.follow ol {
         display: flex;
