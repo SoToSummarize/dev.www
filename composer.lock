@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "8292c840665b254a995881653e4d5c0e",
-    "content-hash": "eeabbe3e97c61975d56f4d42cd4c9e67",
+    "hash": "2b33508e085548437c0a933908e4f6f0",
+    "content-hash": "9a19a8ff6d8e972c36ecd546d06f05c4",
     "packages": [
         {
             "name": "container-interop/container-interop",
@@ -151,6 +151,36 @@
                 "MIT"
             ],
             "time": "2017-12-08 21:06:35"
+        },
+        {
+            "name": "leo-galleguillos/html",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/LeoGalleguillos/Html.git",
+                "reference": "ff471e4f6f65eb9e7f9a58b8907eb5bde5447908"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/LeoGalleguillos/Html/zipball/ff471e4f6f65eb9e7f9a58b8907eb5bde5447908",
+                "reference": "ff471e4f6f65eb9e7f9a58b8907eb5bde5447908",
+                "shasum": ""
+            },
+            "require": {
+                "zendframework/zend-test": "^3.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "LeoGalleguillos\\Html\\": "src/",
+                    "LeoGalleguillos\\HtmlTest\\": "test/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "time": "2018-01-22 15:12:34"
         },
         {
             "name": "leo-galleguillos/image",
@@ -2805,10 +2835,11 @@
     "stability-flags": {
         "zendframework/zend-component-installer": 20,
         "leo-galleguillos/facebook": 20,
-        "leo-galleguillos/string": 20,
         "leo-galleguillos/flash": 20,
-        "leo-galleguillos/summary": 20,
+        "leo-galleguillos/html": 20,
         "leo-galleguillos/image": 20,
+        "leo-galleguillos/string": 20,
+        "leo-galleguillos/summary": 20,
         "leo-galleguillos/twitter": 20,
         "leo-galleguillos/website": 20
     },

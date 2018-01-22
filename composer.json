@@ -16,10 +16,11 @@
         "zendframework/zend-component-installer": "^1.0 || ^0.7 || ^1.0.0-dev@dev",
         "zendframework/zend-mvc": "^3.0.1",
         "leo-galleguillos/facebook": "dev-master",
-        "leo-galleguillos/string": "dev-master",
         "leo-galleguillos/flash": "dev-master",
-        "leo-galleguillos/summary": "dev-master",
+        "leo-galleguillos/html": "dev-master",
         "leo-galleguillos/image": "dev-master",
+        "leo-galleguillos/string": "dev-master",
+        "leo-galleguillos/summary": "dev-master",
         "leo-galleguillos/twitter": "dev-master",
         "leo-galleguillos/website": "dev-master"
     },
