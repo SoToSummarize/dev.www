@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "2b33508e085548437c0a933908e4f6f0",
-    "content-hash": "9a19a8ff6d8e972c36ecd546d06f05c4",
+    "hash": "1040a1469a6d06dc526f3953f2eff814",
+    "content-hash": "37dd4c69da6c75f7a668e01dc9c0c598",
     "packages": [
         {
             "name": "container-interop/container-interop",
@@ -213,6 +213,70 @@
             "time": "2018-01-05 18:31:54"
         },
         {
+            "name": "leo-galleguillos/memcached",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/LeoGalleguillos/Memcached.git",
+                "reference": "c23a88ae0b6c3c15f0e5c985e934a2e8a9f1312f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/LeoGalleguillos/Memcached/zipball/c23a88ae0b6c3c15f0e5c985e934a2e8a9f1312f",
+                "reference": "c23a88ae0b6c3c15f0e5c985e934a2e8a9f1312f",
+                "shasum": ""
+            },
+            "require": {
+                "zendframework/zend-cache": "^2.7",
+                "zendframework/zend-test": "^3.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "LeoGalleguillos\\Memcached\\": "src/",
+                    "LeoGalleguillos\\MemcachedTest\\": "test/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "time": "2017-12-30 01:07:16"
+        },
+        {
+            "name": "leo-galleguillos/sentence",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/LeoGalleguillos/Sentence.git",
+                "reference": "44ab484413b40a177d74e4c8b674eae5abc70bb2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/LeoGalleguillos/Sentence/zipball/44ab484413b40a177d74e4c8b674eae5abc70bb2",
+                "reference": "44ab484413b40a177d74e4c8b674eae5abc70bb2",
+                "shasum": ""
+            },
+            "require": {
+                "leo-galleguillos/memcached": "dev-master",
+                "leo-galleguillos/word": "dev-master",
+                "zendframework/zend-db": "^2.9",
+                "zendframework/zend-test": "^3.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "LeoGalleguillos\\Sentence\\": "src/",
+                    "LeoGalleguillos\\SentenceTest\\": "test/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "time": "2018-01-22 21:21:09"
+        },
+        {
             "name": "leo-galleguillos/string",
             "version": "dev-master",
             "source": {
@@ -248,19 +312,21 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/LeoGalleguillos/Summary.git",
-                "reference": "f729a6273bcb6ff54cba85414adf58050274a397"
+                "reference": "123fa11a3ae4b6c3ca065fd140c977c741841402"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/LeoGalleguillos/Summary/zipball/f729a6273bcb6ff54cba85414adf58050274a397",
-                "reference": "f729a6273bcb6ff54cba85414adf58050274a397",
+                "url": "https://api.github.com/repos/LeoGalleguillos/Summary/zipball/123fa11a3ae4b6c3ca065fd140c977c741841402",
+                "reference": "123fa11a3ae4b6c3ca065fd140c977c741841402",
                 "shasum": ""
             },
             "require": {
                 "leo-galleguillos/facebook": "dev-master",
+                "leo-galleguillos/html": "dev-master",
                 "leo-galleguillos/image": "dev-master",
                 "leo-galleguillos/string": "dev-master",
                 "leo-galleguillos/twitter": "dev-master",
+                "leo-galleguillos/website": "dev-master",
                 "zendframework/zend-db": "^2.9",
                 "zendframework/zend-test": "^3.1"
             },
@@ -275,7 +341,7 @@
             "license": [
                 "MIT"
             ],
-            "time": "2017-12-26 16:11:55"
+            "time": "2018-01-22 20:04:32"
         },
         {
             "name": "leo-galleguillos/twitter",
@@ -339,6 +405,38 @@
                 "MIT"
             ],
             "time": "2018-01-22 18:27:16"
+        },
+        {
+            "name": "leo-galleguillos/word",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/LeoGalleguillos/Word.git",
+                "reference": "0eaa9e1df970afe4e97498f20ea81a78f0665f5f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/LeoGalleguillos/Word/zipball/0eaa9e1df970afe4e97498f20ea81a78f0665f5f",
+                "reference": "0eaa9e1df970afe4e97498f20ea81a78f0665f5f",
+                "shasum": ""
+            },
+            "require": {
+                "leo-galleguillos/memcached": "dev-master",
+                "zendframework/zend-db": "^2.9",
+                "zendframework/zend-test": "^3.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "LeoGalleguillos\\Word\\": "src/",
+                    "LeoGalleguillos\\WordTest\\": "test/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "time": "2018-01-19 18:57:39"
         },
         {
             "name": "myclabs/deep-copy",
@@ -1793,6 +1891,75 @@
             "time": "2016-11-23 20:04:58"
         },
         {
+            "name": "zendframework/zend-cache",
+            "version": "2.7.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zendframework/zend-cache.git",
+                "reference": "c98331b96d3b9d9b24cf32d02660602edb34d039"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zendframework/zend-cache/zipball/c98331b96d3b9d9b24cf32d02660602edb34d039",
+                "reference": "c98331b96d3b9d9b24cf32d02660602edb34d039",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.5 || ^7.0",
+                "zendframework/zend-eventmanager": "^2.6.2 || ^3.0",
+                "zendframework/zend-servicemanager": "^2.7.5 || ^3.0.3",
+                "zendframework/zend-stdlib": "^2.7 || ^3.0"
+            },
+            "require-dev": {
+                "phpbench/phpbench": "^0.10.0",
+                "phpunit/phpunit": "^4.8",
+                "zendframework/zend-coding-standard": "~1.0.0",
+                "zendframework/zend-serializer": "^2.6",
+                "zendframework/zend-session": "^2.6.2"
+            },
+            "suggest": {
+                "ext-apc": "APC or compatible extension, to use the APC storage adapter",
+                "ext-apcu": "APCU >= 5.1.0, to use the APCu storage adapter",
+                "ext-dba": "DBA, to use the DBA storage adapter",
+                "ext-memcache": "Memcache >= 2.0.0 to use the Memcache storage adapter",
+                "ext-memcached": "Memcached >= 1.0.0 to use the Memcached storage adapter",
+                "ext-mongo": "Mongo, to use MongoDb storage adapter",
+                "ext-redis": "Redis, to use Redis storage adapter",
+                "ext-wincache": "WinCache, to use the WinCache storage adapter",
+                "ext-xcache": "XCache, to use the XCache storage adapter",
+                "mongofill/mongofill": "Alternative to ext-mongo - a pure PHP implementation designed as a drop in replacement",
+                "zendframework/zend-serializer": "Zend\\Serializer component",
+                "zendframework/zend-session": "Zend\\Session component"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.7-dev",
+                    "dev-develop": "2.8-dev"
+                },
+                "zf": {
+                    "component": "Zend\\Cache",
+                    "config-provider": "Zend\\Cache\\ConfigProvider"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Zend\\Cache\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "provides a generic way to cache any data",
+            "homepage": "https://github.com/zendframework/zend-cache",
+            "keywords": [
+                "cache",
+                "zf2"
+            ],
+            "time": "2016-12-16 11:35:47"
+        },
+        {
             "name": "zendframework/zend-component-installer",
             "version": "1.1.1",
             "source": {
@@ -2840,6 +3007,7 @@
         "leo-galleguillos/flash": 20,
         "leo-galleguillos/html": 20,
         "leo-galleguillos/image": 20,
+        "leo-galleguillos/sentence": 20,
         "leo-galleguillos/string": 20,
         "leo-galleguillos/summary": 20,
         "leo-galleguillos/twitter": 20,
