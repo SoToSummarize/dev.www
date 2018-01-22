@@ -21,7 +21,7 @@ use Zend\ServiceManager\Factory\InvokableFactory;
 return [
     'router' => [
         'routes' => [
-            'home' => [
+            'index' => [
                 'type' => Literal::class,
                 'options' => [
                     'route'    => '/',
@@ -65,7 +65,9 @@ return [
     ],
     'controllers' => [
         'factories' => [
-            IndexController::class     => IndexControllerFactory::class,
+            IndexController::class     => function ($serviceManager) {
+                return new IndexController();
+            },
             LoginController::class     => LoginControllerFactory::class,
             RegisterController::class  => RegisterControllerFactory::class,
             SummariesController::class => SummariesControllerFactory::class,
