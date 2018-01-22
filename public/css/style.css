@@ -110,6 +110,10 @@ textarea {
         max-width: 990px;
         padding: 10px 0;
     }
+    main .main-container .column {
+        display: grid;
+        grid-row-gap: 10px;
+    }
     main .main-container.columns-2 {
         display: flex;
         justify-content: space-between;
