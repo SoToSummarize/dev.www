@@ -1,27 +1,23 @@
 <?php
-/**
+$count = 0;
+$summaryTitle = '';
+foreach ($nGrams[3] as $key => $nGram) {
+    $summaryTitle .= ($count == 2)
+                   ? ('and ' . $key)
+                   : ($key . ', ');
+    $count++;
+    if ($count >= 3) {
+        break;
+    }
+}
 $this->layout()->setVariables([
-    'htmlHeadMetaOgDescription' => $this->summaryOg()->getOgDescription($summaryEntity),
-    'htmlHeadMetaOgImage'       => $this->summaryOg()->getOgImage($summaryEntity),
-    'htmlHeadMetaOgImageHeight' => $this->summaryOg()->getOgImageHeight($summaryEntity),
-    'htmlHeadMetaOgImageWidth'  => $this->summaryOg()->getOgImageWidth($summaryEntity),
-    'htmlHeadMetaOgType'        => $this->summaryOg()->getOgType($summaryEntity),
-    'htmlHeadTitle'             => $this->summaryHtmlHeadTitle()->getHtmlHeadTitle($summaryEntity),
+    'htmlHeadTitle' => 'So, to summarize, ' . $summaryTitle,
 ]);
-$youtubeUrl = $sourceEntities[0]->url;
-$queryString = parse_url($youtubeUrl)['query'];
-parse_str($queryString, $result);
-$youtubeVideoId = $result['v'];
-
-$summaryFacebookShareUrlHelper = $this->summaryFacebookShareUrl();
-$summaryTwitterShareUrlHelper  = $this->summaryTwitterShareUrl();
-
- */
 ?>
 <div class="main-container columns-2">
     <div class="column column-1">
         <div class="panel">
-            <h1>Wonderful</h1>
+            <h1><?= $this->escape($summaryTitle); ?></h1>
         </div>
         <div class="panel">
             <h2>Titles</h1>
