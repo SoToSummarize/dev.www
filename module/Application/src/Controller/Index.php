@@ -1,13 +1,26 @@
 <?php
 namespace Application\Controller;
 
+use LeoGalleguillos\Summary\Model\Factory as SummaryFactory;
 use Zend\Mvc\Controller\AbstractActionController;
-use Zend\View\Model\ViewModel;
 
 class Index extends AbstractActionController
 {
+    public function __construct(
+        SummaryFactory\Summary $summaryFactory
+    ) {
+        $this->summaryFactory = $summaryFactory;
+    }
+
     public function indexAction()
     {
-        return new ViewModel();
+        $summaryEntities = [];
+        for ($x = 1; $x <= 10; $x++) {
+            $summaryEntities[] = $this->summaryFactory->buildFromSummaryId($x);
+        }
+
+        return [
+            'summaryEntities' => $summaryEntities,
+        ];
     }
 }

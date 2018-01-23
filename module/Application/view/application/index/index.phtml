@@ -1,10 +1,16 @@
 <div class="main-container columns-2">
     <div class="column column-1">
         <div class="panel">
-            <h1>Trending</h1>
+            <h1>News</h1>
 
             <ol>
-                <li><a href="/summaries/1/Senate-to-vote-The-Motley-Fool-and-60-votes-to">Senate to vote, The Motley Fool, and 60 votes to</a></li>
+                <?php foreach ($summaryEntities as $summary): ?>
+                <li>
+                    <a href="<?= $summary->getRootRelativeUrl() ?>">
+                        <?= $this->escape($summary->getTitle()); ?>
+                    </a>
+                </li>
+                <?php endforeach ?>
             </ol>
         </div>
     </div>

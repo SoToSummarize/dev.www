@@ -69,7 +69,9 @@ return [
     'controllers' => [
         'factories' => [
             ApplicationController\Index::class     => function ($serviceManager) {
-                return new ApplicationController\Index();
+                return new ApplicationController\Index(
+                    $serviceManager->get(SummaryFactory\Summary::class)
+                );
             },
             LoginController::class     => LoginControllerFactory::class,
             RegisterController::class  => RegisterControllerFactory::class,
