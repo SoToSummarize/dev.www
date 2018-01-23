@@ -158,12 +158,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/LeoGalleguillos/Html.git",
-                "reference": "a662e02548f526bb6f3fd47d8d663dd2973345e5"
+                "reference": "8ef369465b2d502a1952040bf7c19f15873f57b7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/LeoGalleguillos/Html/zipball/a662e02548f526bb6f3fd47d8d663dd2973345e5",
-                "reference": "a662e02548f526bb6f3fd47d8d663dd2973345e5",
+                "url": "https://api.github.com/repos/LeoGalleguillos/Html/zipball/8ef369465b2d502a1952040bf7c19f15873f57b7",
+                "reference": "8ef369465b2d502a1952040bf7c19f15873f57b7",
                 "shasum": ""
             },
             "require": {
@@ -180,7 +180,7 @@
             "license": [
                 "MIT"
             ],
-            "time": "2018-01-22 17:37:44"
+            "time": "2018-01-23 14:26:43"
         },
         {
             "name": "leo-galleguillos/image",
@@ -312,12 +312,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/LeoGalleguillos/Summary.git",
-                "reference": "123fa11a3ae4b6c3ca065fd140c977c741841402"
+                "reference": "b2d623050967db170cbc56c3e2c54f3a691d7222"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/LeoGalleguillos/Summary/zipball/123fa11a3ae4b6c3ca065fd140c977c741841402",
-                "reference": "123fa11a3ae4b6c3ca065fd140c977c741841402",
+                "url": "https://api.github.com/repos/LeoGalleguillos/Summary/zipball/b2d623050967db170cbc56c3e2c54f3a691d7222",
+                "reference": "b2d623050967db170cbc56c3e2c54f3a691d7222",
                 "shasum": ""
             },
             "require": {
@@ -341,7 +341,7 @@
             "license": [
                 "MIT"
             ],
-            "time": "2018-01-22 20:04:32"
+            "time": "2018-01-23 15:10:43"
         },
         {
             "name": "leo-galleguillos/twitter",
