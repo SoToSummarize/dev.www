@@ -19,13 +19,13 @@ class Register extends AbstractActionController
         }
 
         return [
-            'message' => $this->flashService->getMessage(),
+            'message' => $this->flashService->get('message'),
         ];
     }
 
     private function registerAction()
     {
-        $this->flashService->setMessage('Some fields were invalid.');
+        $this->flashService->set('message', 'Some fields were invalid.');
         return $this->redirect()->toRoute('register')->setStatusCode(303);
     }
 }

@@ -19,13 +19,13 @@ class Login extends AbstractActionController
         }
 
         return [
-            'message' => $this->flashService->getMessage(),
+            'message' => $this->flashService->get('message'),
         ];
     }
 
     private function loginAction()
     {
-        $this->flashService->setMessage('Invalid username or password.');
+        $this->flashService->set('message', 'Invalid username or password.');
         return $this->redirect()->toRoute('login')->setStatusCode(303);
     }
 }
