@@ -1,23 +1,12 @@
 <?php
-$count = 0;
-$summaryTitle = '';
-foreach ($nGrams[3] as $key => $nGram) {
-    $summaryTitle .= ($count == 2)
-                   ? ('and ' . $key)
-                   : ($key . ', ');
-    $count++;
-    if ($count >= 3) {
-        break;
-    }
-}
 $this->layout()->setVariables([
-    'htmlHeadTitle' => 'So, to summarize, ' . $summaryTitle,
+    'htmlHeadTitle' => 'So, to summarize, ' . $summaryEntity->getTitle(),
 ]);
 ?>
 <div class="main-container columns-2">
     <div class="column column-1">
         <div class="panel">
-            <h1><?= $this->escape($summaryTitle); ?></h1>
+            <h1><?= $this->escape($summaryEntity->getTitle()); ?></h1>
         </div>
         <div class="panel">
             <h2>Titles</h1>
