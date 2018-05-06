@@ -13,6 +13,7 @@ use LeoGalleguillos\Html\Model\Service as HtmlService;
 use LeoGalleguillos\Sentence\Model\Service as SentenceService;
 use LeoGalleguillos\String\Model\Service as StringService;
 use LeoGalleguillos\Summary\Model\Factory as SummaryFactory;
+use LeoGalleguillos\Summary\Model\Service as SummaryService;
 use LeoGalleguillos\Summary\View\Helper\Summary\FacebookShareUrl as SummaryFacebookShareUrlHelper;
 use LeoGalleguillos\Summary\View\Helper\Summary\TwitterShareUrl as SummaryTwitterShareUrlHelper;
 use LeoGalleguillos\Twitter\View\Helper\ShareUrl as TwitterShareUrlHelper;
@@ -79,7 +80,9 @@ return [
     'controllers' => [
         'factories' => [
             ApplicationController\Admin::class     => function ($serviceManager) {
-                return new ApplicationCOntroller\Admin();
+                return new ApplicationCOntroller\Admin(
+                    $serviceManager->get(SummaryService\SummaryEntities::class)
+                );
             },
             ApplicationController\Index::class     => function ($serviceManager) {
                 return new ApplicationController\Index(
