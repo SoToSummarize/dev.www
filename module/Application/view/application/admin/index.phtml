@@ -4,6 +4,18 @@
             <h1>Admin</h1>
 
             <h2>Summaries</h2>
+
+            <ol>
+                <?php foreach ($summaryEntities as $summaryEntity): ?>
+                    <?php try {
+                        $summaryEntityTitle = $summaryEntity->getTitle();
+                    } catch (TypeError $typeError) {
+                        $summaryEntityTitle = 'No title yet';
+                    }
+                    ?>
+                    <li><?= $this->escape($summaryEntityTitle); ?></li>
+                <?php endforeach ?>
+            </ol>
         </div>
     </div>
     <div class="column column-2">

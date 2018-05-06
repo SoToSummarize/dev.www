@@ -14,5 +14,8 @@ class Admin extends AbstractActionController
 
     public function indexAction()
     {
+        return [
+            'summaryEntities' => $this->summaryEntitiesService->getSummaryEntities(),
+        ];
     }
 }
