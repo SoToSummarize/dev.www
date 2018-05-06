@@ -366,12 +366,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/LeoGalleguillos/Summary.git",
-                "reference": "c9f90c4af29dcc5ccd26cbac9f93798c3c6bb614"
+                "reference": "b6676ab8bc0c5d1b407643bd9826e5da741b2ccd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/LeoGalleguillos/Summary/zipball/c9f90c4af29dcc5ccd26cbac9f93798c3c6bb614",
-                "reference": "c9f90c4af29dcc5ccd26cbac9f93798c3c6bb614",
+                "url": "https://api.github.com/repos/LeoGalleguillos/Summary/zipball/b6676ab8bc0c5d1b407643bd9826e5da741b2ccd",
+                "reference": "b6676ab8bc0c5d1b407643bd9826e5da741b2ccd",
                 "shasum": ""
             },
             "require": {
@@ -395,7 +395,7 @@
             "license": [
                 "MIT"
             ],
-            "time": "2018-05-06 17:35:05"
+            "time": "2018-05-06 19:42:46"
         },
         {
             "name": "leo-galleguillos/twitter",
