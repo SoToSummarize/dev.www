@@ -24,6 +24,16 @@ use Zend\ServiceManager\Factory\InvokableFactory;
 return [
     'router' => [
         'routes' => [
+            'admin' => [
+                'type' => Literal::class,
+                'options' => [
+                    'route'    => '/admin',
+                    'defaults' => [
+                        'controller' => ApplicationController\Admin::class,
+                        'action'     => 'index',
+                    ],
+                ],
+            ],
             'index' => [
                 'type' => Literal::class,
                 'options' => [
@@ -68,6 +78,9 @@ return [
     ],
     'controllers' => [
         'factories' => [
+            ApplicationController\Admin::class     => function ($serviceManager) {
+                return new ApplicationCOntroller\Admin();
+            },
             ApplicationController\Index::class     => function ($serviceManager) {
                 return new ApplicationController\Index(
                     $serviceManager->get(SummaryFactory\Summary::class)
