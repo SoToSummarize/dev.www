@@ -26,9 +26,9 @@ return [
     'router' => [
         'routes' => [
             'admin' => [
-                'type' => Literal::class,
+                'type' => Segment::class,
                 'options' => [
-                    'route'    => '/admin',
+                    'route'    => '/admin[/:action]',
                     'defaults' => [
                         'controller' => ApplicationController\Admin::class,
                         'action'     => 'index',

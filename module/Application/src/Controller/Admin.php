@@ -18,4 +18,9 @@ class Admin extends AbstractActionController
             'summaryEntities' => $this->summaryEntitiesService->getSummaryEntities(),
         ];
     }
+
+    public function crawlAction()
+    {
+
+    }
 }
