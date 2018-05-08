@@ -93,9 +93,7 @@ return [
             RegisterController::class  => RegisterControllerFactory::class,
             ApplicationController\Summaries::class => function ($serviceManager) {
                 return new ApplicationController\Summaries(
-                    $serviceManager->get(HtmlService\WordsOnly::class),
                     $serviceManager->get(SentenceService\Variations::class),
-                    $serviceManager->get(StringService\NGrams\SortedByCount::class),
                     $serviceManager->get(SummaryFactory\Summary::class)
                 );
             }

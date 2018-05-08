@@ -10,14 +10,10 @@ use Zend\Mvc\Controller\AbstractActionController;
 class Summaries extends AbstractActionController
 {
     public function __construct(
-        HtmlService\WordsOnly $wordsOnlyService,
         SentenceService\Variations $variationsService,
-        StringService\NGrams\SortedByCount $nGramsSortedByCountService,
         SummaryFactory\Summary $summaryFactory
     ) {
-        $this->wordsOnlyService           = $wordsOnlyService;
         $this->variationsService          = $variationsService;
-        $this->nGramsSortedByCountService = $nGramsSortedByCountService;
         $this->summaryFactory             = $summaryFactory;
     }
 
@@ -34,16 +30,7 @@ class Summaries extends AbstractActionController
             strlen($summaryEntity->getWebpage()->getTitle())
         );
 
-        $nGrams = $this->nGramsSortedByCountService->getNGramsSortedByCount(
-            $this->wordsOnlyService->getWordsOnly(
-                $summaryEntity->getWebpage()->getHtml()->getString()
-            ),
-            1,
-            4
-        );
-
         return [
-            'nGrams'          => $nGrams,
             'summaryEntity'   => $summaryEntity,
             'titleVariations' => $titleVariations,
         ];
