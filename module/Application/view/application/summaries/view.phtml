@@ -22,7 +22,7 @@ $this->layout()->setVariables([
 
             <ol>
                 <?php $count = 0;?>
-                <?php foreach ($nGrams[4] as $key => $nGram): ?>
+                <?php foreach ($summaryEntity->getNGrams()[4] as $key => $nGram): ?>
                     <li><?= $this->escape($key); ?></li>
                     <?php if ($count >= 9) {break;} ?>
                     <?php $count++; ?>
@@ -31,7 +31,7 @@ $this->layout()->setVariables([
 
             <ol>
                 <?php $count = 0;?>
-                <?php foreach ($nGrams[3] as $key => $nGram): ?>
+                <?php foreach ($summaryEntity->getNGrams()[3] as $key => $nGram): ?>
                     <li><?= $this->escape($key); ?></li>
                     <?php if ($count >= 9) {break;} ?>
                     <?php $count++; ?>
@@ -40,7 +40,7 @@ $this->layout()->setVariables([
 
             <ol>
                 <?php $count = 0;?>
-                <?php foreach ($nGrams[2] as $key => $nGram): ?>
+                <?php foreach ($summaryEntity->getNGrams()[2] as $key => $nGram): ?>
                     <li><?= $this->escape($key); ?></li>
                     <?php if ($count >= 9) {break;} ?>
                     <?php $count++; ?>
@@ -49,7 +49,7 @@ $this->layout()->setVariables([
 
             <ol>
                 <?php $count = 0;?>
-                <?php foreach ($nGrams[1] as $key => $nGram): ?>
+                <?php foreach ($summaryEntity->getNGrams()[1] as $key => $nGram): ?>
                     <li><?= $this->escape($key); ?></li>
                     <?php if ($count >= 9) {break;} ?>
                     <?php $count++; ?>
