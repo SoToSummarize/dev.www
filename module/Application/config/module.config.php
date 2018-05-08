@@ -17,10 +17,9 @@ use LeoGalleguillos\Summary\Model\Service as SummaryService;
 use LeoGalleguillos\Summary\View\Helper\Summary\FacebookShareUrl as SummaryFacebookShareUrlHelper;
 use LeoGalleguillos\Summary\View\Helper\Summary\TwitterShareUrl as SummaryTwitterShareUrlHelper;
 use LeoGalleguillos\Twitter\View\Helper\ShareUrl as TwitterShareUrlHelper;
+use LeoGalleguillos\Website\Model\Service as WebsiteService;
 use Zend\Router\Http\Literal;
 use Zend\Router\Http\Segment;
-use Zend\ServiceManager\Factory\InvokableFactory;
-
 
 return [
     'router' => [
@@ -80,8 +79,9 @@ return [
     'controllers' => [
         'factories' => [
             ApplicationController\Admin::class     => function ($serviceManager) {
-                return new ApplicationCOntroller\Admin(
-                    $serviceManager->get(SummaryService\SummaryEntities::class)
+                return new ApplicationController\Admin(
+                    $serviceManager->get(SummaryService\SummaryEntities::class),
+                    $serviceManager->get(WebsiteService\Webpage\Html::class)
                 );
             },
             ApplicationController\Index::class     => function ($serviceManager) {
