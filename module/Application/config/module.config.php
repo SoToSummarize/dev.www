@@ -7,7 +7,6 @@ use Application\Controller\Register as RegisterController;
 use Application\Controller\Summaries as SummariesController;
 use Application\Model\Factory\Controller\Login as LoginControllerFactory;
 use Application\Model\Factory\Controller\Register as RegisterControllerFactory;
-use Application\Model\Factory\Controller\Summaries as SummariesControllerFactory;
 use LeoGalleguillos\Facebook\View\Helper\ShareUrl as FacebookShareUrlHelper;
 use LeoGalleguillos\Html\Model\Service as HtmlService;
 use LeoGalleguillos\Sentence\Model\Service as SentenceService;
@@ -80,6 +79,7 @@ return [
         'factories' => [
             ApplicationController\Admin::class     => function ($serviceManager) {
                 return new ApplicationController\Admin(
+                    $serviceManager->get(HtmlService\Title::class),
                     $serviceManager->get(SummaryService\SummaryEntities::class),
                     $serviceManager->get(WebsiteService\Webpage\Html::class)
                 );
