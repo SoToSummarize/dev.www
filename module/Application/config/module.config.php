@@ -17,6 +17,7 @@ use LeoGalleguillos\Summary\View\Helper\Summary\FacebookShareUrl as SummaryFaceb
 use LeoGalleguillos\Summary\View\Helper\Summary\TwitterShareUrl as SummaryTwitterShareUrlHelper;
 use LeoGalleguillos\Twitter\View\Helper\ShareUrl as TwitterShareUrlHelper;
 use LeoGalleguillos\Website\Model\Service as WebsiteService;
+use LeoGalleguillos\Website\Model\Table as WebsiteTable;
 use Zend\Router\Http\Literal;
 use Zend\Router\Http\Segment;
 
@@ -81,7 +82,8 @@ return [
                 return new ApplicationController\Admin(
                     $serviceManager->get(HtmlService\Title::class),
                     $serviceManager->get(SummaryService\SummaryEntities::class),
-                    $serviceManager->get(WebsiteService\Webpage\Html::class)
+                    $serviceManager->get(WebsiteService\Webpage\Html::class),
+                    $serviceManager->get(WebsiteTable\Webpage::class)
                 );
             },
             ApplicationController\Index::class     => function ($serviceManager) {
