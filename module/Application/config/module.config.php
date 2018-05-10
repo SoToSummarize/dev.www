@@ -13,6 +13,7 @@ use LeoGalleguillos\Sentence\Model\Service as SentenceService;
 use LeoGalleguillos\String\Model\Service as StringService;
 use LeoGalleguillos\Summary\Model\Factory as SummaryFactory;
 use LeoGalleguillos\Summary\Model\Service as SummaryService;
+use LeoGalleguillos\Summary\Model\Table as SummaryTable;
 use LeoGalleguillos\Summary\View\Helper\Summary\FacebookShareUrl as SummaryFacebookShareUrlHelper;
 use LeoGalleguillos\Summary\View\Helper\Summary\TwitterShareUrl as SummaryTwitterShareUrlHelper;
 use LeoGalleguillos\Twitter\View\Helper\ShareUrl as TwitterShareUrlHelper;
@@ -88,7 +89,8 @@ return [
             },
             ApplicationController\Index::class     => function ($serviceManager) {
                 return new ApplicationController\Index(
-                    $serviceManager->get(SummaryFactory\Summary::class)
+                    $serviceManager->get(SummaryFactory\Summary::class),
+                    $serviceManager->get(SummaryTable\Summary::class)
                 );
             },
             LoginController::class     => LoginControllerFactory::class,
