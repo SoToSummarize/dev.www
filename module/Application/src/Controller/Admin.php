@@ -1,6 +1,8 @@
 <?php
 namespace Application\Controller;
 
+use Exception;
+use LeoGalleguillos\Html\Model\Entity as HtmlEntity;
 use LeoGalleguillos\Html\Model\Service as HtmlService;
 use LeoGalleguillos\Summary\Model\Service as SummaryService;
 use LeoGalleguillos\Website\Model\Service as WebsiteService;
@@ -36,7 +38,22 @@ class Admin extends AbstractActionController
         if (!empty($_POST)) {
             $viewModel->setVariable('url', $_POST['url']);
 
+            $htmlString  = $this->htmlService->getHtmlFromUrl($_POST['url']);
+            $htmlEntity = new HtmlEntity\Html();
+            $htmlEntity->setString($htmlString);
+            $titleEntity = $this->titleService->getTitleFromHtml($htmlEntity);
 
+            try {
+                $webpageId = $this->webpageTable->insertIgnore(
+                    null,
+                    $_POST['url'],
+                    $titleEntity->getValue(),
+                    $htmlEntity->getString()
+                );
+                $viewModel->setVariable('webpageId', $webpageId);
+            } catch (Exception $exception) {
+
+            }
         }
 
         return $viewModel;

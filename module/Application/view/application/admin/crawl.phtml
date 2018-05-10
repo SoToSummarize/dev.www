@@ -7,6 +7,14 @@
                 URL: <input type="text" name="url">
                 <input type="submit" value="Submit">
             </form>
+
+            <?php if (isset($webpageId)): ?>
+                <p>
+                    Successfully added URL.<br>
+                    URL: <?= $this->escape($url); ?><br>
+                    Webpage ID: <?= $this->escape($webpageId); ?>
+                </p>
+            <?php endif ?>
         </div>
     </div>
     <div class="column column-2">
