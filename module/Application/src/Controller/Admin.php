@@ -58,4 +58,9 @@ class Admin extends AbstractActionController
 
         return $viewModel;
     }
+
+    public function populateAction()
+    {
+
+    }
 }
