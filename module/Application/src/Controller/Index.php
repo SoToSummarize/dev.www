@@ -18,8 +18,8 @@ class Index extends AbstractActionController
     public function indexAction()
     {
         $summaryEntities = [];
-        for ($x = 1; $x <= 12; $x++) {
-            $summaryEntities[] = $this->summaryFactory->buildFromSummaryId($x);
+        foreach ($this->summaryTable->select() as $array) {
+            $summaryEntities[] = $this->summaryFactory->buildFromArray($array);
         }
 
         return [
