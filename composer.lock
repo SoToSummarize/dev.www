@@ -435,12 +435,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/LeoGalleguillos/Website.git",
-                "reference": "90e59bf15e4ea036f36e09cff7102710ab73d58a"
+                "reference": "1fb55eba14c74071cea2ef3f55fafe6d53f651b0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/LeoGalleguillos/Website/zipball/90e59bf15e4ea036f36e09cff7102710ab73d58a",
-                "reference": "90e59bf15e4ea036f36e09cff7102710ab73d58a",
+                "url": "https://api.github.com/repos/LeoGalleguillos/Website/zipball/1fb55eba14c74071cea2ef3f55fafe6d53f651b0",
+                "reference": "1fb55eba14c74071cea2ef3f55fafe6d53f651b0",
                 "shasum": ""
             },
             "require": {
@@ -460,7 +460,7 @@
             "license": [
                 "MIT"
             ],
-            "time": "2018-05-10 14:24:33"
+            "time": "2018-05-10 14:51:53"
         },
         {
             "name": "leo-galleguillos/word",
