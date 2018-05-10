@@ -64,6 +64,14 @@ class Admin extends AbstractActionController
 
     public function populateAction()
     {
-
+        $maxWebpageId = $this->summaryTable->selectMaxWebpageId();
+        $webpageIds   = $this->webpageTable->selectWebpageIdWhereWebpageIdGreaterThan(
+            $maxWebpageId
+        );
+        foreach ($webpageIds as $webpageId) {
+            $this->summaryTable->insert(
+                $webpageId
+            );
+        }
     }
 }
