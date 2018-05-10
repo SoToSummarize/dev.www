@@ -83,6 +83,7 @@ return [
                 return new ApplicationController\Admin(
                     $serviceManager->get(HtmlService\Title::class),
                     $serviceManager->get(SummaryService\SummaryEntities::class),
+                    $serviceManager->get(SummaryTable\Summary::class),
                     $serviceManager->get(WebsiteService\Webpage\Html::class),
                     $serviceManager->get(WebsiteTable\Webpage::class)
                 );

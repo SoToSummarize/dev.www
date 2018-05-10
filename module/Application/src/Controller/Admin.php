@@ -5,6 +5,7 @@ use Exception;
 use LeoGalleguillos\Html\Model\Entity as HtmlEntity;
 use LeoGalleguillos\Html\Model\Service as HtmlService;
 use LeoGalleguillos\Summary\Model\Service as SummaryService;
+use LeoGalleguillos\Summary\Model\Table as SummaryTable;
 use LeoGalleguillos\Website\Model\Service as WebsiteService;
 use LeoGalleguillos\Website\Model\Table as WebsiteTable;
 use Zend\Mvc\Controller\AbstractActionController;
@@ -15,11 +16,13 @@ class Admin extends AbstractActionController
     public function __construct(
         HtmlService\Title $titleService,
         SummaryService\SummaryEntities $summaryEntitiesService,
+        SummaryTable\Summary $summaryTable,
         WebsiteService\Webpage\Html $htmlService,
         WebsiteTable\Webpage $webpageTable
     ) {
         $this->titleService           = $titleService;
         $this->summaryEntitiesService = $summaryEntitiesService;
+        $this->summaryTable           = $summaryTable;
         $this->htmlService            = $htmlService;
         $this->webpageTable           = $webpageTable;
     }
