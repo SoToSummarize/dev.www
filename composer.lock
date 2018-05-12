@@ -366,12 +366,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/LeoGalleguillos/Summary.git",
-                "reference": "8d0c0c92380f4b30062a41e72163f91583e59290"
+                "reference": "9efab5458b098662983e8935443e22b98898a526"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/LeoGalleguillos/Summary/zipball/8d0c0c92380f4b30062a41e72163f91583e59290",
-                "reference": "8d0c0c92380f4b30062a41e72163f91583e59290",
+                "url": "https://api.github.com/repos/LeoGalleguillos/Summary/zipball/9efab5458b098662983e8935443e22b98898a526",
+                "reference": "9efab5458b098662983e8935443e22b98898a526",
                 "shasum": ""
             },
             "require": {
@@ -395,7 +395,7 @@
             "license": [
                 "MIT"
             ],
-            "time": "2018-05-10 20:07:28"
+            "time": "2018-05-12 21:31:30"
         },
         {
             "name": "leo-galleguillos/twitter",
@@ -435,12 +435,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/LeoGalleguillos/Website.git",
-                "reference": "b65c0337c29f058df056bfe57fc7157b9fd35e45"
+                "reference": "d5e14da5732c460f8de9ccd48d391abb647f1454"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/LeoGalleguillos/Website/zipball/b65c0337c29f058df056bfe57fc7157b9fd35e45",
-                "reference": "b65c0337c29f058df056bfe57fc7157b9fd35e45",
+                "url": "https://api.github.com/repos/LeoGalleguillos/Website/zipball/d5e14da5732c460f8de9ccd48d391abb647f1454",
+                "reference": "d5e14da5732c460f8de9ccd48d391abb647f1454",
                 "shasum": ""
             },
             "require": {
@@ -460,7 +460,7 @@
             "license": [
                 "MIT"
             ],
-            "time": "2018-05-12 21:06:00"
+            "time": "2018-05-12 21:28:00"
         },
         {
             "name": "leo-galleguillos/word",
