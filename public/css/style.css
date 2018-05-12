@@ -75,6 +75,12 @@ main .main-container {
     margin: 0 auto;
     max-width: 990px;
 }
+    main .main-container .column > div {
+        margin-bottom: 10px;
+    }
+    main .main-container .column > div:last-child {
+        margin-bottom: 0;
+    }
 main .panel {
     background-color: #fff;
     padding: 10px;
@@ -123,8 +129,8 @@ textarea {
         padding: 10px 0;
     }
     main .main-container .column {
-        display: grid;
-        grid-row-gap: 10px;
+        display: flex;
+        flex-direction: column;
     }
     main .main-container.columns-2 {
         display: flex;
